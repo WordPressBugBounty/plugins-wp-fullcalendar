@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: WP FullCalendar
-Version: 1.5
+Version: 1.6
 Text Domain: wp-fullcalendar
 Plugin URI: https://wordpress.org/extend/plugins/wp-fullcalendar/
 Description: Uses the jQuery FullCalendar plugin to create a stunning calendar view of events, posts and eventually other CPTs. Integrates well with Events Manager
@@ -10,7 +10,7 @@ Author URI: https://pixelite.com
 */
 
 /*
-Copyright (c) 2023, Marcus Sykes
+Copyright (c) 2025, Marcus Sykes
 
 This program is free software; you can redistribute it and/or
 modify it under the terms of the GNU General Public License
@@ -23,7 +23,7 @@ MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 GNU General Public License for more details.
 */
 
-define('WPFC_VERSION', '1.5');
+define('WPFC_VERSION', '1.6');
 define('WPFC_UI_VERSION', '1.12'); //jQuery 1.11.x
 
 class WP_FullCalendar {
@@ -265,8 +265,8 @@ class WP_FullCalendar {
 		if (is_array($args) ) {
 			self::$args = array_merge(self::$args, $args);
 		}
-		self::$args['month'] = ( !empty($args['month']) ) ? $args['month']-1:date('m', current_time('timestamp'))-1;
-		self::$args['year'] = ( !empty($args['year']) ) ? $args['year']:date('Y', current_time('timestamp'));
+		self::$args['month'] = ( !empty($args['month']) ) ? absint($args['month']-1):date('m', current_time('timestamp'))-1;
+		self::$args['year'] = ( !empty($args['year']) ) ? absint($args['year']):date('Y', current_time('timestamp'));
 		self::$args = apply_filters('wpfc_fullcalendar_args', self::$args);
 		add_action('wp_footer', array('WP_FullCalendar','footer_js'));
 		ob_start();

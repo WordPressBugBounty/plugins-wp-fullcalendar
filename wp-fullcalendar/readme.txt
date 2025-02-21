@@ -3,8 +3,8 @@ Contributors: pxlite, msykes, mikelynn
 Tags: calendar, calendars, ajax calendar, event calendars, events calendar
 Text Domain: wp-fullcalendar
 Requires at least: 3.6
-Tested up to: 6.5
-Stable tag: 1.5
+Tested up to: 6.7.2
+Stable tag: 1.6
 
 Uses the FullCalendar library to create a stunning calendar view of events, posts and other custom post types
 
@@ -49,6 +49,9 @@ Here's a rough roadmap of where we're heading, and will be ammended as time perm
 Install this plugin like a normal WordPress plugin. Once activated, you'll see a new panel in the Settings section for editing the options for calendar display.
 
 == Changelog ==
+= 1.6 =
+* fixed reported security vulnerability allowing potential XSS submitted by authenticated uses in shortcode
+
 = 1.5 =
 * fixed reported security vulnerability which allows guests to view protected posts without displaying calendar
 * updated PHP code to adhere to WP coding standards
