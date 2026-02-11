@@ -3,7 +3,7 @@ Contributors: pxlite, msykes, mikelynn
 Tags: calendar, calendars, ajax calendar, event calendars, events calendar
 Text Domain: wp-fullcalendar
 Requires at least: 3.6
-Tested up to: 6.7.2
+Tested up to: 6.8
 Stable tag: 1.6
 
 Uses the FullCalendar library to create a stunning calendar view of events, posts and other custom post types
