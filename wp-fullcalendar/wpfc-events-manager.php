@@ -3,12 +3,12 @@
 * EM Integration Stuff
 * We'll start moving stuff away here for now to decouple it completely from the plugin
 */
-define('WPFC_EM_MIN_VERSION', 5.5); //minimum version for integration
+define( 'WPFC_EM_MIN_VERSION', 5.5 ); //minimum version for integration
 
-if ( defined('EM_VERSION') && WPFC_EM_MIN_VERSION > EM_VERSION ) {
+if ( defined( 'EM_VERSION' ) && WPFC_EM_MIN_VERSION > EM_VERSION ) {
 	//check that EM is up to date
-	add_action('admin_notices', 'wpfc_em_version_warning');
-	add_action('network_admin_notices', 'wpfc_em_version_warning');
+	add_action( 'admin_notices', 'wpfc_em_version_warning' );
+	add_action( 'network_admin_notices', 'wpfc_em_version_warning' );
 }
 
 function wpfc_em_version_warning() {
